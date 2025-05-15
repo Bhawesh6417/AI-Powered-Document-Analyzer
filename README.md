@@ -77,6 +77,9 @@ Output
 
 ![image](https://github.com/user-attachments/assets/ccb29afb-cc98-41b8-b7f5-30751d54b3cc)
 
+Excel File: 
+
+![image](https://github.com/user-attachments/assets/c45392d4-7424-48a6-936e-bc6f1a886e1d)
 
 Contributing
 
