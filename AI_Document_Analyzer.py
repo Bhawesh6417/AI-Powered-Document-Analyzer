@@ -16,7 +16,7 @@ if API_KEY:
 
 # Set page config
 st.set_page_config(page_title="Gemini File Chatbot 🤖", layout="wide")
-st.title("📂 Gemini File Q&A Chatbot")
+st.title("Gemini File Q&A Chatbot")
 st.markdown("Upload a **PDF**, **DOCX**, **Excel**, or **CSV** file and ask questions based on its content.")
 
 # Initialize Gemini model
@@ -55,7 +55,7 @@ if uploaded_file:
         else:
             st.warning("Unsupported file format.")
 
-        st.success("File content successfully extracted! ✅")
+        st.success("File content successfully extracted!")
 
     except Exception as e:
         st.error(f"Error reading file: {e}")
@@ -64,7 +64,7 @@ if uploaded_file:
 if file_text:
     user_query = st.text_area("Ask a question about the file:", height=100)
 
-    if st.button("💬 Get Answer"):
+    if st.button(" Get Answer"):
         with st.spinner("Thinking..."):
             try:
                 prompt = f"""
@@ -76,7 +76,7 @@ File Content:
                 prompt += f"\n\nUser's Question: {user_query}\nAnswer:"
 
                 response = model.generate_content(prompt)
-                st.subheader("📢 Answer")
+                st.subheader(" Answer")
                 st.markdown(response.text)
             except Exception as e:
                 st.error(f"Failed to generate answer: {e}")
